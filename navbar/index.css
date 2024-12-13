@@ -36,10 +36,22 @@ body {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-.img-size {
-    max-height: 200px;
-    object-fit: cover;
+
+
+.card-img-container {
+    width: 100%; /* 確保圖片適應卡片寬度 */
+    height: 200px; /* 統一高度 */
+    overflow: hidden; /* 隱藏溢出的內容 */
 }
+
+.card-img-container img {
+    width: 100%; /* 圖片寬度固定 */
+    height: 100%; /* 圖片高度填滿容器 */
+    object-fit: cover; /* 保持比例並裁剪 */
+    
+}
+
+
 
 .card-title a {
     text-decoration: none;
@@ -112,3 +124,5 @@ body {
 form {
     width: 100%; /* 確保表單占滿可用寬度 */
 }
+
+
