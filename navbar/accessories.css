@@ -86,6 +86,7 @@ body {
 }
 
 .fixed-footer {
+    position: relative; /* 這樣可以避免固定定位影響頁面內容 */
     bottom: 0;
     width: 100%;
     padding: 10px;
