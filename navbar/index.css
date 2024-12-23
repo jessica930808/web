@@ -65,18 +65,28 @@ body {
 }
 
 .card-title a:hover {
-    color: #007bff;
+    color: #46494b;
 }
 
 .btn-buy {
     background-color: #ffc107;
-    border: none;
     color: #343a40;
-    font-weight: 500;
+    border-radius: 8px;
+    padding: px 10px;
+    font-size: 1rem;
+    border: none;
+    transition: background-color 0.3s ease;
+    
 }
 
 .btn-buy:hover {
     background-color: #e0a800;
+    cursor: pointer;
+}
+
+.btn-buy:hover {
+    background-color: #e0a800;
+    cursor: pointer;
 }
 
 .text-start {
@@ -134,3 +144,53 @@ form {
 }
 
 
+
+
+
+
+
+.product-details {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.product-image {
+    border-radius: 10px;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+.product-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #333;
+}
+
+.product-description {
+    font-size: 1rem;
+    color: #666;
+    margin: 10px 0;
+}
+
+.product-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #e0a800;
+    margin: 10px 0;
+}
+
+
+
+
+
+
+
+.mb-3 {
+    margin-bottom: 20px;
+}

@@ -70,13 +70,18 @@ body {
 
 .btn-buy {
     background-color: #ffc107;
-    border: none;
     color: #343a40;
-    font-weight: 500;
+    border-radius: 8px;
+    padding: px 10px;
+    font-size: 1rem;
+    border: none;
+    transition: background-color 0.3s ease;
+    
 }
 
 .btn-buy:hover {
     background-color: #e0a800;
+    cursor: pointer;
 }
 
 .text-start {
@@ -104,7 +109,7 @@ body {
 }
 
 .search-bar .form-control {
-    border: none; /* 移除輸入框的邊框 */
+    order: none; /* 移除輸入框的邊框 */
     box-shadow: none; /* 移除陰影 */
     background-color: #ffffff; /* 與搜尋欄背景一致 */
 }
@@ -113,7 +118,7 @@ body {
     outline: none; /* 聚焦時移除外框 */
     box-shadow: none; /* 聚焦時無陰影 */
 }
-
+b
 .search-bar .input-group-text {
     background-color: #ffffff; /* 放大鏡背景與搜尋欄一致 */
     border: none; /* 移除邊框 */
