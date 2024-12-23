@@ -1,3 +1,5 @@
+
+
 // 登入
 const users = [
     { username: 'test', password: '1234' }, // 模擬用戶數據
@@ -14,17 +16,65 @@ document.getElementById('loginForm').addEventListener('submit', event => {
     if (user) {
         alert('登入成功！');
         isLoggedIn = true; // 設置為已登入
-        document.getElementById('loginModal').classList.remove('show'); // 隱藏模態框
-        document.body.classList.remove('modal-open');
-        document.querySelector('.modal-backdrop').remove();
-
-        // 更改 UI 狀態
-        document.querySelector('.nav-item .nav-link[data-bs-target="#loginModal"]').innerHTML =
-            `<i class="bi bi-person-circle"></i> ${username}`;
+        localStorage.setItem('isLoggedIn', true); // 儲存登入狀態
+        localStorage.setItem('username', username); // 儲存使用者名稱
+        updateUIForLoggedInUser(username); // 更新 UI
+        const modal = bootstrap.Modal.getInstance(document.getElementById('loginModal'));
+        modal.hide(); // 隱藏模態框
     } else {
         alert('帳號或密碼錯誤！');
     }
 });
+
+// 更新登入後的 UI
+function updateUIForLoggedInUser(username) {
+    const loginNavLink = document.querySelector('.nav-item .nav-link[data-bs-target="#loginModal"]');
+    loginNavLink.innerHTML = `<i class="bi bi-person-circle"></i> ${username}`;
+    loginNavLink.removeAttribute('data-bs-target'); // 禁用再次打開登入框
+    loginNavLink.setAttribute('href', '#'); // 防止點擊跳轉
+
+    // 如果登出按鈕已存在，不需要再新增
+    if (!document.getElementById('logoutButton')) {
+        // 添加登出按鈕
+        const logoutButton = document.createElement('a');
+        logoutButton.id = 'logoutButton';
+        logoutButton.className = 'nav-link text-danger';
+        logoutButton.href = '#';
+        logoutButton.innerHTML = `<i class="bi bi-box-arrow-right"></i> 登出`;
+        logoutButton.addEventListener('click', handleLogout);
+
+        // 插入登出按鈕到導覽列
+        const navList = loginNavLink.parentElement.parentElement; // 找到 <ul> 父容器
+        const newNavItem = document.createElement('li');
+        newNavItem.className = 'nav-item';
+        newNavItem.appendChild(logoutButton);
+        navList.appendChild(newNavItem); // 插入登出按鈕
+    }
+}
+
+
+function handleLogout() {
+    localStorage.removeItem('isLoggedIn'); // 移除登入狀態
+    localStorage.removeItem('username'); // 移除使用者名稱
+    localStorage.removeItem('orderItems'); // 清空訂單資料
+    alert('您已成功登出');
+    location.reload(); // 重新載入頁面
+}
+
+
+//初始化登入檢查
+document.addEventListener('DOMContentLoaded', () => {
+    const savedLoginStatus = localStorage.getItem('isLoggedIn');
+    const savedUsername = localStorage.getItem('username');
+    if (savedLoginStatus === 'true' && savedUsername) {
+        isLoggedIn = true;
+        updateUIForLoggedInUser(savedUsername);
+    }
+});
+
+
+
+
 
 // 購物車資料
 const cart = [];
@@ -193,14 +243,12 @@ document.getElementById('checkoutButton').addEventListener('click', () => {
         alert('購物車為空，無法結帳');
     } else {
         alert('結帳成功！感謝您的購買');
+        localStorage.setItem('orderItems', JSON.stringify(cart)); // 將購物車內容存儲到 localStorage
         cart.length = 0; // 清空購物車
         updateCartView();
+        window.location.href = 'order.html'; // 跳轉到訂單頁面
     }
 });
-
-
-
-
 
 
 

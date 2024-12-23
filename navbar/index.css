@@ -145,8 +145,13 @@ form {
 
 
 
-
-
+#logoutButton {
+    color: white !important; /* 強制設成白色文字 */
+    background-color: rgba(0, 0, 0, 0.1); /* 紅色背景 */
+    
+    padding: 10px 10px;
+    transition: background-color 0.3s ease;
+}
 
 
 .product-details {
