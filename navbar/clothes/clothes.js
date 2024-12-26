@@ -83,47 +83,99 @@ const products = [
     {
         name: "韓國 馬海毛 字母 針織 毛衣",
         price: 1180,
-        image: "image/上衣1.png",
+        image: "/image/上衣1.png",
         description: "這款馬海毛針織毛衣，擁有舒適的質感和時尚的字母設計，讓你穿上不僅保暖，還能展現個性。",
         colors: ["紅色", "藍色", "綠色"],
         sizes: ["S", "M", "L"]
     },
     {
+        name: "韓國 星型 做舊 落肩 薄長袖",
+        price: 980,
+        image: "/image/上衣2.png",
+        description: "星型做舊設計，展現休閒與個性兼具的風格，適合日常穿搭。",
+        colors: ["黑色", "白色"],
+        sizes: ["S", "M", "L"]
+    },
+    {
+        name: "WBI Sun Protection Sheer",
+        price: 780,
+        image: "/image/上衣3.png",
+        description: "輕薄透氣的防曬上衣，提供日常防護，適合戶外活動。",
+        colors: ["淺藍", "粉紅", "白色"],
+        sizes: ["S", "M", "L"]
+    },
+    {
+        name: "霧感 漸變 暈染 寬鬆 帽T",
+        price: 1280,
+        image: "/image/上衣4.png",
+        description: "寬鬆的帽T設計，結合漸變霧感染色，展現潮流風格。",
+        colors: ["灰色", "藍色"],
+        sizes: ["M", "L", "XL"]
+    },
+    {
+        name: "韓國 寬鬆 日月 水洗 薄長袖",
+        price: 1180,
+        image: "/image/上衣5.png",
+        description: "水洗效果打造復古感，日月設計增添神秘氣息。",
+        colors: ["白色", "灰色"],
+        sizes: ["S", "M", "L"]
+    },
+    {
+        name: "韓國 字母 天鵝絨 運動 薄長袖",
+        price: 880,
+        image: "/image/上衣6.png",
+        description: "柔軟天鵝絨材質，搭配字母印花，適合日常休閒穿搭。",
+        colors: ["藍色", "紅色"],
+        sizes: ["S", "M", "L"]
+    },
+    {
+        name: "韓國 刷破 洞洞 針織 連帽 外套",
+        price: 1380,
+        image: "/image/上衣7.png",
+        description: "刷破洞洞設計的針織外套，結合復古與現代感。",
+        colors: ["黑色", "白色"],
+        sizes: ["S", "M", "L"]
+    },
+    {
+        name: "韓國 光暈 染料 印花 簡約 短袖",
+        price: 780,
+        image: "/image/上衣8.png",
+        description: "簡約設計短袖，光暈染料印花展現獨特個性。",
+        colors: ["灰色", "白色"],
+        sizes: ["S", "M", "L"]
+    },
+    {
+        name: "VINTAGE 水洗 做舊 薄長袖",
+        price: 980,
+        image: "/image/上衣9.png",
+        description: "水洗效果與做舊設計，展現復古氣質。",
+        colors: ["灰色", "藍色"],
+        sizes: ["S", "M", "L"]
+    },
+    {
         name: "吊染 漸層 洞洞 毛衣",
         price: 1180,
-        image: "image/上衣10.png",
+        image: "/image/上衣10.png",
         description: "這款吊染漸層毛衣，獨特的洞洞設計帶來透氣感，搭配漸層色調展現個性。",
         colors: ["灰色", "白色", "黑色"],
         sizes: ["S", "M", "L"]
-    }, {
-        name: "韓國 側拼接 抽繩 氣球 牛仔褲",
-        price: 880,
-        image: "image/下身2.png",
-        description: "",
-        colors: ["灰色", "黑色", "藍色"],
-        sizes: ["S", "M", "L"]
-    }, {
-        name: "側口袋 迷彩 七分 工作褲",
-        price: 800,
-        image: "image/下身12.png",
-        description: "",
-        colors: ["軍綠色"],
-        sizes: ["S", "M", "L"]
-    }, {
-        name: "流蘇 綴飾 實心 蛋型 純鋼 褲鏈",
-        price: 1380,
-        image: "image/配件2.png",
-        description: "",
-        colors: ["圖片色"],
-        sizes: ["55cm"]
-    }, {
-        name: "火山石 圓珠 拼接 純鋼 項鍊",
-        price: 1280,
-        image: "image/配件3.png",
-        description: "",
-        colors: ["圖片色"],
-        sizes: ["55cm"]
     },
+    {
+        name: "VINTAGE 破壞 華夫格 薄長袖",
+        price: 780,
+        image: "/image/上衣11.png",
+        description: "破壞設計與華夫格紋結合，打造潮流復古風。",
+        colors: ["灰色", "藍色"],
+        sizes: ["S", "M", "L"]
+    },
+    {
+        name: "龐克 vintage 兩件式 薄長袖",
+        price: 1080,
+        image: "/image/上衣12.png",
+        description: "兩件式設計，龐克風格與復古氣息相互結合，適合多層次搭配。",
+        colors: ["黑色", "灰色"],
+        sizes: ["S", "M", "L"]
+    }
 ];
 
 // 顯示商品詳細介面
